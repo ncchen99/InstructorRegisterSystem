@@ -30,7 +30,7 @@
 			<div class="wrap-login100 p-t-190 p-b-30">
 				<form class="login100-form validate-form" action="login.php" method = "post">
 					<div class="login100-form-avatar">
-						<img src="images/avatar-01.jpg" alt="AVATAR">
+						<img src="images/download.png" alt="AVATAR">
 					</div>
 					<span class="login100-form-title p-t-20 p-b-45">
 						<?php
