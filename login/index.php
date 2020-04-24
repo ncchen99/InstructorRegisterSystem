@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V12</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -28,13 +28,19 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/img-01.jpg');">
 			<div class="wrap-login100 p-t-190 p-b-30">
-				<form class="login100-form validate-form" action="../form.php" method = "post">
+				<form class="login100-form validate-form" action="login.php" method = "post">
 					<div class="login100-form-avatar">
 						<img src="images/avatar-01.jpg" alt="AVATAR">
 					</div>
-
 					<span class="login100-form-title p-t-20 p-b-45">
-						John Doe
+						<?php
+							 
+							if(!isset($_SESSION['loginWrong'])){			
+								echo 'user';
+							}else{
+								echo 'username or password wrong';
+							}	
+						?>
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
@@ -58,7 +64,7 @@
 							Login
 						</button>
 					</div>
-
+					<!--
 					<div class="text-center w-full p-t-25 p-b-230">
 						<a href="#" class="txt1">
 							Forgot Username / Password?
@@ -71,6 +77,7 @@
 							<i class="fa fa-long-arrow-right"></i>						
 						</a>
 					</div>
+					-->
 				</form>
 			</div>
 		</div>
