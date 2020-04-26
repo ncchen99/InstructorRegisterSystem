@@ -10,7 +10,8 @@ foreach ($sql->fetchAll() as $row) {
     $_SESSION['user'] = [
         'username' => $row['username'],
         'passw' => $row['passw'],
-        'realname' => $row['realname']];
+        'realname' => $row['realname'],
+        'authority' => $row['authority']];
 }
 if (isset($_SESSION['user'])) {
     echo "<script>location='./../form.php';</script>";
