@@ -98,10 +98,9 @@
           break;
 
         case 'yesNoQuestions':
-          echo '<h4 class="mb-3">', $row['question'], '</h4>';
-          echo '
-        <div class="d-block my-3">
-          <div class="custom-control custom-radio">
+          echo '<div class="d-block my-3">';
+          echo '<label>', $row['question'], '</label>';
+          echo '<div class="custom-control custom-radio">
             <input name="';
           echo $row['id'], '"id="debit" type="radio" class="custom-control-input" value="是" checked required>
             <label class="custom-control-label" for="debit"> 是 </label>
