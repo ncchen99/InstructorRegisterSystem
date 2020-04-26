@@ -8,7 +8,7 @@ foreach ($sql->fetchAll() as $row) {
     $_SESSION['user'] = [
         'username' => $row['username'],
         'passw' => $row['passw'],
-        'realname' => row['realname']];
+        'realname' => $row['realname']];
 }
 if (isset($_SESSION['user'])) {
     header("Location:../form.php");
