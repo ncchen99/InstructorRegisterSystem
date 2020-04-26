@@ -1,11 +1,32 @@
-.container {
-    width: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-right: auto;
-    margin-left: auto;
-}
+.needs-validation {
+    display: auto;
+    margin-top:0;
+    margin-right:auto;
+    margin-bottom:0;
+    margin-left:auto;
 
+}
+.row {
+    width: 75%;
+    margin-top:0;
+    margin-right:auto;
+    margin-bottom:0;
+    margin-left:auto;
+}
+.my-3{
+    width: 75%;
+    margin-top:0;
+    margin-right:auto;
+    margin-bottom:0;
+    margin-left:auto;
+}
+.btn-block{
+    width: 75%;
+    margin-top:0;
+    margin-right:auto;
+    margin-bottom:0;
+    margin-left:auto;
+}
 .custom-select {
   position: relative;
   font-family: Arial;

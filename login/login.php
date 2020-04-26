@@ -1,3 +1,5 @@
+<?php require '../header.php'; ?>
+
 <?php
 session_start();
 unset($_SESSION['user']);
@@ -11,9 +13,11 @@ foreach ($sql->fetchAll() as $row) {
         'realname' => $row['realname']];
 }
 if (isset($_SESSION['user'])) {
-    header("Location:../form.php");
+    echo "<script>location='./../form.php';</script>";
 } else {
     echo "<script language=JavaScript> alert('login not success') </script>";
     echo "<script>location='./index.php';</script>";
     //header("Location: index.php");
 }
+?>
+<?php require '../footer.php'; ?>

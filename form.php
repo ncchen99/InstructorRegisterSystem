@@ -66,7 +66,6 @@
         case 'dropDownMenu':
           echo '
         <div class="row">
-          <div class="col-md-5 mb-3">
             <label>', $row['question'];
           echo '</label>
             <select class="custom-select d-block w-100" name="';
@@ -79,13 +78,11 @@
             <div class="invalid-feedback">
               必填！
             </div>
-          </div>
         </div>';
           break;
 
         case 'shortAnswerQuestions':
           echo '<div class="row">
-                <div class="col-md-6 mb-3">
                   <label>';
           echo $row['question'], '</label>
                   <input type="text" class="form-control" name="';
@@ -93,7 +90,6 @@
                 <div class="invalid-feedback">
                     必填！
                   </div>
-                </div>
               </div>';
           break;
 
@@ -229,7 +225,7 @@
     </div>-->
 
     <hr class="mb-4">
-    <button class="btn btn-primary btn-lg btn-block" type="submit">完成</button>
+    <button class="btn btn-primary btn-lg btn-block" type="submit" >完成</button>
   </form>
 </div>
 <?php require 'footer.php'; ?>
