@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <?php require 'header.php'; ?>
 
 <div class="container">
@@ -5,7 +9,6 @@
         <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h2>交通積分審核</h2>
         <?php
-            session_start();
             $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
             $ans = '';
             $datetime = date('Y-m-d H:i:s');

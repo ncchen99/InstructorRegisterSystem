@@ -1,7 +1,10 @@
+<?php
+session_start();
+?>
+
 <?php require '../header.php'; ?>
 
 <?php
-session_start();
 unset($_SESSION['user']);
 $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
 $sql = $pdo->prepare('select * from users where username=? and passw=?');
