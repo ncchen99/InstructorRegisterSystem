@@ -1,8 +1,7 @@
 <?php
 session_start();
+require '../header.php'; 
 ?>
-
-<?php require '../header.php'; ?>
 
 <?php
 unset($_SESSION['user']);
@@ -17,7 +16,11 @@ foreach ($sql->fetchAll() as $row) {
         'authority' => $row['authority']];
 }
 if (isset($_SESSION['user'])) {
-    echo "<script>location='./../form.php';</script>";
+    if($_SESSION['user']['authority'] == 'student'){
+        echo "<script>location='./../form.php';</script>";
+    }else{
+        echo "<script>location='./../management/show_table.php';</script>";
+    }
 } else {
     echo "<script language=JavaScript> alert('login not success') </script>";
     echo "<script>location='./index.php';</script>";
