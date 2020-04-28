@@ -1,4 +1,6 @@
-<?php require 'header.php'; ?>
+<?php
+session_start();
+require 'header.php'; ?>
 
 <div class="container">
   <div class="py-5 text-center">
@@ -56,67 +58,84 @@
             </div>
           </form>
         </div>-->
+  <style>
+    .col {
+      padding-left: 0;
+      padding-right: 30px;
+      min-width: auto;
+    }
+  </style>
+  <?php
+  echo '<div class="row"><label>填表人</label></div>
+  <div class="row">
+  <div class="col">';
+  echo '<input class="form-control" id="disabledInput" type="text" placeholder="', $_SESSION['user']['realname'], '" disabled>';
+  ?>
+</div>
+<div class="col-md-5">
+  <a href="../logout.php"><button class="btn btn-primary btn-sm" type="submit">登出</button></a></div>
+</div>
 
-  <form class="needs-validation" action="form_output.php" method="post" novalidate>
-    <?php
-    $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
-    foreach ($pdo->query('select * from questions') as $row) {
-      switch ($row['genre']) {
+<form class="needs-validation" action="form_output.php" method="post" novalidate>
+  <?php
+  $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
+  foreach ($pdo->query('select * from questions') as $row) {
+    switch ($row['genre']) {
 
-        case 'dropDownMenu':
-          echo '
+      case 'dropDownMenu':
+        echo '
         <div class="row">
             <label>', $row['question'];
-          echo '</label>
+        echo '</label>
             <select class="custom-select d-block w-100" name="';
-          echo $row['id'], '" required>';
-          $opts = explode(",", $row['options']);
-          foreach ($opts as $opt) {
-            echo '<option value="', $opt, '">', $opt, '</option>';
-          }
-          echo '</select>
+        echo $row['id'], '" required>';
+        $opts = explode(",", $row['options']);
+        foreach ($opts as $opt) {
+          echo '<option value="', $opt, '">', $opt, '</option>';
+        }
+        echo '</select>
             <div class="invalid-feedback">
               必填！
             </div>
         </div>';
-          break;
+        break;
 
-        case 'shortAnswerQuestions':
-          echo '<div class="row">
+      case 'shortAnswerQuestions':
+        echo '<div class="row">
                   <label>';
-          echo $row['question'], '</label>
+        echo $row['question'], '</label>
                   <input type="text" class="form-control" name="';
-          echo $row['id'], '" placeholder="" value="" required>
+        echo $row['id'], '" placeholder="" value="" required>
                 <div class="invalid-feedback">
                     必填！
                   </div>
               </div>';
-          break;
+        break;
 
-        case 'yesNoQuestions':
-          echo '<div class="d-block my-3">';
-          echo '<label>', $row['question'], '</label>';
-          echo '<div class="custom-control custom-radio">
+      case 'yesNoQuestions':
+        echo '<div class="d-block my-3">';
+        echo '<label>', $row['question'], '</label>';
+        echo '<div class="custom-control custom-radio">
             <input name="';
-          echo $row['id'], '"id="debit" type="radio" class="custom-control-input" value="是" checked required>
+        echo $row['id'], '"id="debit" type="radio" class="custom-control-input" value="是" checked required>
             <label class="custom-control-label" for="debit"> 是 </label>
             </div>
               <div class="custom-control custom-radio">
               <input name="';
-              echo $row['id'], '"id="paypal" type="radio" class="custom-control-input" value="否" required>
+        echo $row['id'], '"id="paypal" type="radio" class="custom-control-input" value="否" required>
               <label class="custom-control-label" for="paypal"> 否 </label>
               </div>
             </div>';
-          break;
-      }
+        break;
     }
-    ?>
+  }
+  ?>
 
 
 
 
 
-    <!--<div class="mb-3">
+  <!--<div class="mb-3">
       <label for="email">Email <span class="text-muted">(Optional)</span></label>
       <input type="email" class="form-control" id="email" placeholder="you@example.com">
       <div class="invalid-feedback">
@@ -224,8 +243,8 @@
       </div>
     </div>-->
 
-    <hr class="mb-4">
-    <button class="btn btn-primary btn-lg btn-block" type="submit" >完成</button>
-  </form>
+  <hr class="mb-4">
+  <button class="btn btn-primary btn-lg btn-block" type="submit">完成</button>
+</form>
 </div>
 <?php require 'footer.php'; ?>
