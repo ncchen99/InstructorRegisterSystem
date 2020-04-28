@@ -3,8 +3,7 @@ session_start();
 require 'header.php';
 if (!isset($_SESSION['user'])) {
     echo "<script>location='./../index.php';</script>";
-} else if ($_SESSION['user']['authority'] == 'student')
-    echo "<script>location='./../index.php';</script>";
+}
 ?>
 
 <div class="container">
