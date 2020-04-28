@@ -35,48 +35,101 @@ if (!isset($_SESSION['user'])) {
         </ul>
     </div>
 </nav>
-<div class="table-ncc">
-    <h1><span class="blue">&lt;</span>Table<span class="blue">&gt;</span> <span class="yellow">回應</pan>
-    </h1>
+
+<style>
+    .table-ncc {
+        margin: 30px;
+    }
+</style>
+
+
+<div class="container">
+    <div class="bs-docs-section">
+            <h1><span class="blue">&lt;</span>SQL<span class="blue">&gt;</span> <span class="yellow">指令</pan>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1 id="tables">Tables</h1>
+                </div>
+
+                <div class="bs-component">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Column heading</th>
+                                <th scope="col">Column heading</th>
+                                <th scope="col">Column heading</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-active">
+                                <th scope="row">Active</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Default</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-primary">
+                                <th scope="row">Primary</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-secondary">
+                                <th scope="row">Secondary</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-success">
+                                <th scope="row">Success</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-danger">
+                                <th scope="row">Danger</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Warning</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-info">
+                                <th scope="row">Info</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-light">
+                                <th scope="row">Light</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-dark">
+                                <th scope="row">Dark</th>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                                <td>Column content</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /example -->
+            </div>
+        </div>
+    </div>
 </div>
 
-
-<table class="container">
-    <thead>
-        <tr>
-            <th>
-                <h1>名子</h1>
-            </th>
-            <th>
-                <h1>填寫時間</h1>
-            </th>
-            <?php
-            $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
-            foreach ($pdo->query('select * from questions') as $row) {
-                echo '<th>
-                <h1>', $row['question'], '</h1>
-                </th>';
-            }
-            ?>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
-        foreach ($pdo->query('select * from answers ORDER BY `datetime`') as $row) {
-            echo '<tr>
-            <td>', $row['realname'], '</td>
-            <td>', $row['datetime'], '</td>';
-            $anwsers = explode(",", $row['ans']);
-            array_pop($anwsers);
-            foreach ($anwsers as $ans) {
-                echo '<td>', $ans, '</td>';
-            }
-            echo '<tr>';
-        }
-        ?>
-    </tbody>
-</table>
-
-
-<?php require '../footer.php'; ?> 
+<?php require '../footer.php'; ?>
