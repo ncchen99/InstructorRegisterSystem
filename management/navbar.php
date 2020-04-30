@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="show_table.php">
         <img src="../assets/todo.png" width="30" height="30" class="d-inline-block align-top" alt="">
     </a>
@@ -18,7 +18,7 @@
                 <a class="nav-link" href="#">使用者設定</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="sql_execution.php">SQL指令<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="search.php">進階查詢區<span class="sr-only">(current)</span></a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
