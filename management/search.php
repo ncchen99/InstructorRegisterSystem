@@ -11,8 +11,8 @@ require 'assets/table_css.php';
 ?>
 <style>
   .card-body {
-  background-color: #1f2739 ;
-  background-image: linear-gradient(147deg, #1f2739  0%, #2c3446  100%);
+  background-color: #90BBD6  ;
+  background-image: linear-gradient(147deg, #90BBD6   0%, #F4D03F    100%);
 }
 </style>
 
