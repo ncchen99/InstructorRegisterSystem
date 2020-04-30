@@ -10,14 +10,15 @@ if (!isset($_SESSION['user'])) {
 require 'assets/table_css.php';
 ?>
 <style>
-  .card-body {
-  background-color: #90BBD6  ;
-  background-image: linear-gradient(147deg, #90BBD6   0%, #F4D03F    100%);
-}
+    .card-body {
+        background-color: #343a40;
+        background-image: linear-gradient(147deg, #343a40 0%, #343a40 100%);
+    }
+
 </style>
 
 <div class="container py-5">
-    <div class="card rounded shadow border-0">
+    <div class="card rounded border-0">
         <div class="card-body p-5 bg-white rounded">
             <table id="example" style="width:100%" class="container">
                 <thead>
