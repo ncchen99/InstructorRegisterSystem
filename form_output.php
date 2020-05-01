@@ -41,7 +41,7 @@ if (!isset($_SESSION['user'])) {
 
     <div class="row">
         <div class="col">
-            <a href="http://whsh.site"> <button class="btn btn-primary btn-lg btn-block" type="submit">回首頁</button></a>
+            <a href="index.php"> <button class="btn btn-primary btn-lg btn-block" type="submit">回首頁</button></a>
         </div>
         <div class="col">
             <form action="logout.php" method="post">

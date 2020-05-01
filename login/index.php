@@ -4,7 +4,7 @@ if (isset($_SESSION['user'])) {
 	if ($_SESSION['user']['authority'] == 'student') {
 		echo "<script>location='./../form.php';</script>";
 	} else {
-		echo "<script>location='./../management/show_table.php';</script>";
+		echo "<script>location='./../management/index.php';</script>";
 	}
 }
 ?>

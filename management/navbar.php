@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="show_table.php">查看回應</a>
+                <a class="nav-link" href="index.php">查看回應</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">新增/刪除問題</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">使用者設定</a>
+                <a class="nav-link" href="users.php">使用者設定</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="search.php">進階查詢區<span class="sr-only">(current)</span></a>
