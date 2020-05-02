@@ -1,7 +1,7 @@
 <?php
 $connect = mysqli_connect("whsh.site:3306", "ncchen", "ncchen1234", "account");
 $columns = array('id', 'username','passw','realname','authority');
-
+mysqli_set_charset($connect, "utf8");//設定編碼為utf-8
 if(isset($_POST["username"], $_POST["password"],$_POST["realname"],$_POST["authority"]))
 {
  $username = mysqli_real_escape_string($connect, $_POST["username"]);
