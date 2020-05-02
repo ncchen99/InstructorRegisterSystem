@@ -1,5 +1,7 @@
 <?php
 //fetch.php
+header('Content-Type: application/json; charset=UTF-8');
+
 $connect = mysqli_connect("whsh.site:3306", "ncchen", "ncchen1234", "account");
 $columns = array('id', 'username','passw','realname','authority');
 

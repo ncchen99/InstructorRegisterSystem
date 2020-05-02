@@ -12,7 +12,7 @@ require 'navbar.php';
   .box {
     width: 1270px;
     padding: 20px;
-    background-color:#343a40;
+    background-color: #343a40;
     border: 0;
     border-radius: 5px;
     margin-top: 25px;
