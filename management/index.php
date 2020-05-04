@@ -1,5 +1,6 @@
-<?php require '../config.php';
+<?php 
 session_start();
+require '../config.php';
 require 'header.php';
 require 'navbar.php';
 require 'assets/table_css.php';
