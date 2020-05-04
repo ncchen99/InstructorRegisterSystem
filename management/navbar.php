@@ -8,17 +8,17 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.php">查看回應</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">新增/刪除問題</a>
+                <a class="nav-link" href="questions.php">新增/刪除問題</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="users.php">使用者設定</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="search.php">進階查詢區<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="search.php">進階查詢區</a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

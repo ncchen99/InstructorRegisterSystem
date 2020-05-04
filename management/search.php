@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 require '../config.php';
 require 'header.php';
@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])) {
     echo "<script>location='./../index.php';</script>";
 } else if ($_SESSION['user']['authority'] == 'student') {
     echo "<script>location='./../index.php';</script>";
-}
+} 
 require 'assets/table_css.php';
 ?>
 <style>

@@ -1,8 +1,19 @@
-<?php require '../config.php';
+<?php
+session_start();
+require '../config.php';
 require 'header.php';
 require 'navbar.php';
-require 'assets/table_css.php'
+require 'assets/table_css.php';
+if (!isset($_SESSION['user'])) {
+  echo "<script>location='./../index.php';</script>";
+} else if ($_SESSION['user']['authority'] == 'student') {
+  echo "<script>location='./../index.php';</script>";
+} else if ($_SESSION['user']['authority'] == 'teacher') {
+  echo "<script language=JavaScript> alert('權限不足！') </script>";
+  echo "<script>location='./index.php';</script>";
+}
 ?>
+
 <style>
   body {
     margin: 0;
@@ -29,11 +40,11 @@ require 'assets/table_css.php'
     <h1 align="center">使用者設定</h1>
     <br />
     <div class="">
-      <br/>
+      <br />
       <div align="right">
         <button type="button" name="add" id="add" class="btn btn-info">Add</button>
       </div>
-      <br/>
+      <br />
       <div id="alert_message"></div>
       <table id="user_data" style="width: 100%;">
         <thead>
@@ -56,6 +67,7 @@ require 'assets/table_css.php'
 <?php
 require 'footer.php';
 ?>
+
 <script type="text/javascript" language="javascript">
   $(document).ready(function() {
 
@@ -112,6 +124,23 @@ require 'footer.php';
       $('#user_data tbody').prepend(html);
     });
 
+    /* $(function() {
+      <select class="selectpicker"><option value="admin">admin</option><option value="teacher">teacher</option><option value="student">student</option></select>
+      $('[id="data5"]').each(function() {
+        var parent = $(this).parent(),
+          text = ["admin", "teacher", "student"],
+          select = function() {
+            var returnstring = '';
+            for (var i in text) {
+              returnstring += "<option value='" + text[i] + "'>" + text[i] + "</option>";
+            }
+            return "<select>" + returnstring + "</select>";
+          }();
+        $(this).empty();
+        parent.append(select);
+      });
+    }); */
+
     $(document).on('click', '#insert', function() {
       var id = $('#data1').text();
       var username = $('#data2').text();
@@ -141,13 +170,13 @@ require 'footer.php';
           $('#alert_message').html('');
         }, 5000);
       } else {
-        alert("Both Fields is required");
+        alert("未填寫完整！");
       }
     });
 
     $(document).on('click', '.delete', function() {
       var id = $(this).attr("id");
-      if (confirm("Are you sure you want to remove this?")) {
+      if (confirm("你確定要移除這列?")) {
         $.ajax({
           url: "users/delete.php",
           method: "POST",
@@ -167,3 +196,4 @@ require 'footer.php';
     });
   });
 </script>
+
