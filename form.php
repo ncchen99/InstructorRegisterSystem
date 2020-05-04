@@ -125,13 +125,13 @@ if (!isset($_SESSION['user'])) {
           echo '<label>', $row['question'], '</label>';
           echo '<div class="custom-control custom-radio">
             <input name="';
-          echo $row['id'], '"id="debit" type="radio" class="custom-control-input" value="是" checked required>
-            <label class="custom-control-label" for="debit"> 是 </label>
+          echo $row['id'], '"id="',$row['question'].'1','" type="radio" class="custom-control-input" value="是" checked required>
+            <label class="custom-control-label" for="',$row['question'].'1','"> 是 </label>
             </div>
               <div class="custom-control custom-radio">
               <input name="';
-          echo $row['id'], '"id="paypal" type="radio" class="custom-control-input" value="否" required>
-              <label class="custom-control-label" for="paypal"> 否 </label>
+          echo $row['id'], '"id="',$row['question'].'2','" type="radio" class="custom-control-input" value="否" required>
+              <label class="custom-control-label" for="',$row['question'].'2','"> 否 </label>
               </div>
             </div>';
           break;
