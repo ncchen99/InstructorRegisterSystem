@@ -1,4 +1,4 @@
-<?php
+<?php require '../../config.php';
  
 /*
  * DataTables example server-side processing script.
@@ -36,10 +36,10 @@ $columns = array(
  
 // SQL server connection information
 $sql_details = array(
-    'user' => 'ncchen',
-    'pass' => 'ncchen1234',
+    'user' => $username,
+    'pass' => $password,
     'db'   => 'account',
-    'host' => 'whsh.site:3306'
+    'host' => $hostport
 );
  
  

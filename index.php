@@ -27,7 +27,7 @@
       <div class="inner">
         <h3 class="masthead-brand">WHCSC</h3>
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="http://csc.whsh.site">Home</a>
+          <a class="nav-link active" href="http://csc.'.$host.'">Home</a>
           <!-- <a class="nav-link" href="#">Features</a>
             <a class="nav-link" href="#">Contact</a>-->
         </nav>

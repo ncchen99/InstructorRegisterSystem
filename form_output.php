@@ -1,4 +1,4 @@
-<?php
+<?php require 'config.php';
 session_start();
 require 'header.php';
 if (!isset($_SESSION['user'])) {
@@ -11,7 +11,7 @@ if (!isset($_SESSION['user'])) {
         <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h2>交通積分審核</h2>
         <?php
-        $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
+        $pdo = new PDO('mysql:host='.$host.';port=' .$port. ';dbname=account;charset=utf8', $username, $password);
         $ans = '';
         $legal = True;
         date_default_timezone_set("Asia/Taipei");

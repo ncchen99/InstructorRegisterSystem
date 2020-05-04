@@ -1,6 +1,7 @@
-<?php
+<?php require 'config.php';
 session_start();
-require 'header.php';
+require 'header.php';  
+
 if (!isset($_SESSION['user'])) {
   echo "<script>location='./../index.php';</script>";
 }
@@ -84,7 +85,7 @@ if (!isset($_SESSION['user'])) {
   ?>
   <form class="needs-validation" action="form_output.php" method="post" novalidate>
     <?php
-    $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
+    $pdo = new PDO('mysql:host='.$host.';port=' .$port. ';dbname=account;charset=utf8', $username, $password);
     foreach ($pdo->query('select * from questions') as $row) {
       switch ($row['genre']) {
 

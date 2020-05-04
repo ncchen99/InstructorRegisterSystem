@@ -1,11 +1,8 @@
 <?php
 session_start();
-require '../header.php'; 
-?>
-
-<?php
+require '../config.php';
 unset($_SESSION['user']);
-$pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
+$pdo = new PDO('mysql:host='.$host.';port=' .$port. ';dbname=account;charset=utf8', $username, $password);
 $sql = $pdo->prepare('select * from users where username=? and passw=?');
 $sql->execute([$_REQUEST['username'], $_REQUEST['pass']]);
 foreach ($sql->fetchAll() as $row) {
@@ -27,4 +24,3 @@ if (isset($_SESSION['user'])) {
     //header("Location: index.php");
 }
 ?>
-<?php require '../footer.php'; ?>

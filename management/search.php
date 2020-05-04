@@ -1,4 +1,4 @@
-<?php
+<?php require '../config.php';
 session_start();
 require 'header.php';
 require 'navbar.php';

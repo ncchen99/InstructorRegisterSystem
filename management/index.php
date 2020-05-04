@@ -1,4 +1,4 @@
-<?php
+<?php require '../config.php';
 session_start();
 require 'header.php';
 require 'navbar.php';
@@ -27,7 +27,7 @@ if (!isset($_SESSION['user'])) {
                 <h1>填寫時間</h1>
             </th>
             <?php
-            $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
+            $pdo = new PDO('mysql:host='.$host.';port=' .$port. ';dbname=account;charset=utf8', $username, $password);
             foreach ($pdo->query('select * from questions') as $row) {
                 echo '<th>
                 <h1>', $row['question'], '</h1>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['user'])) {
     </thead>
     <tbody>
         <?php
-        $pdo = new PDO('mysql:host=whsh.site;port=3306;dbname=account;charset=utf8', 'ncchen', 'ncchen1234');
+        $pdo = new PDO('mysql:host='.$host.';port=' .$port. ';dbname=account;charset=utf8', $username, $password);
         foreach ($pdo->query('select * from answers ORDER BY `datetime`') as $row) {
             echo '<tr>
             <td>', $row['realname'], '</td>

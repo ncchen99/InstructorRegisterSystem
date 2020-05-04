@@ -1,4 +1,4 @@
-<?php
+<?php require '../config.php';
 require 'header.php';
 require 'navbar.php';
 require 'assets/table_css.php'
@@ -67,7 +67,7 @@ require 'footer.php';
         "serverSide": true,
         "order": [],
         "ajax": {
-          url: "fetch.php",
+          url: "users/fetch.php",
           type: "POST"
         }
       });
@@ -75,7 +75,7 @@ require 'footer.php';
 
     function update_data(id, column_name, value) {
       $.ajax({
-        url: "update.php",
+        url: "users/update.php",
         method: "POST",
         data: {
           id: id,
@@ -123,7 +123,7 @@ require 'footer.php';
         realname != '' &&
         authority != '') {
         $.ajax({
-          url: "insert.php",
+          url: "users/insert.php",
           method: "POST",
           data: {
             username: username,
@@ -149,7 +149,7 @@ require 'footer.php';
       var id = $(this).attr("id");
       if (confirm("Are you sure you want to remove this?")) {
         $.ajax({
-          url: "delete.php",
+          url: "users/delete.php",
           method: "POST",
           data: {
             id: id

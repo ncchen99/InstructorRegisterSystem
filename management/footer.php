@@ -47,7 +47,7 @@
             $('#example').DataTable( {
                 "processing": true,
                 "serverSide": true,
-                "ajax": "search_sp.php"
+                "ajax": "search/search_sp.php"
             } );
         } );
       </script>
