@@ -1,6 +1,7 @@
 <?php
 require 'header.php';
 require 'navbar.php';
+require 'assets/table_css.php'
 ?>
 <style>
   body {
@@ -27,14 +28,14 @@ require 'navbar.php';
   <div class="container box">
     <h1 align="center">使用者設定</h1>
     <br />
-    <div class="table-responsive">
-      <br />
+    <div class="">
+      <br/>
       <div align="right">
         <button type="button" name="add" id="add" class="btn btn-info">Add</button>
       </div>
-      <br />
+      <br/>
       <div id="alert_message"></div>
-      <table id="user_data" class="table table-bordered table-striped">
+      <table id="user_data" style="width: 100%;">
         <thead>
           <tr>
             <th>#</th>

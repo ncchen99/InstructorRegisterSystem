@@ -10173,3 +10173,18 @@ a.text-dark:focus {
 .list-group-item-action .list-group-item-heading {
   color: #fff;
 }
+
+@media (max-width: 789px) {
+  .container {
+    padding:0;
+    margin:0;
+  }
+  .box{
+    padding:0;
+    margin:0;
+  }
+
+  body {
+    padding:0;
+  }
+}
