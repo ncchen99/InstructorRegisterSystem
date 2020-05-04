@@ -1,5 +1,6 @@
-<?php require 'config.php';
+<?php
 session_start();
+require 'config.php';
 require 'header.php';
 if (!isset($_SESSION['user'])) {
     echo "<script>location='./index.php';</script>";

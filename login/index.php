@@ -1,5 +1,6 @@
-<?php require '../config.php';
+<?php 
 session_start();
+require '../config.php';
 if (isset($_SESSION['user'])) {
 	if ($_SESSION['user']['authority'] == 'student') {
 		echo "<script>location='./../form.php';</script>";
