@@ -1,7 +1,7 @@
-<?php require '../../config.php';
+<?php 
 //fetch.php
 header('Content-Type: application/json; charset=UTF-8');
-
+require '../../config.php';
 $connect = mysqli_connect($hostport, $username, $password, "account");
 mysqli_set_charset($connect, "utf8");//設定編碼為utf-8
 $columns = array('id', 'username','passw','realname','authority');
