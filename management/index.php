@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 require '../config.php';
 require 'header.php';
@@ -10,7 +10,15 @@ if (!isset($_SESSION['user'])) {
     echo "<script>location='./../index.php';</script>";
 ?>
 
+<style>
+    @media (max-width: 800px) {
 
+        .container td:nth-child(4),
+        .container th:nth-child(4) {
+            display: none;
+        }
+    }
+</style>
 
 <div class="table-ncc">
     <h1><span class="blue">&lt;</span>Table<span class="blue">&gt;</span> <span class="yellow">回應</pan>
@@ -28,7 +36,7 @@ if (!isset($_SESSION['user'])) {
                 <h1>填寫時間</h1>
             </th>
             <?php
-            $pdo = new PDO('mysql:host='.$host.';port=' .$port. ';dbname=account;charset=utf8', $username, $password);
+            $pdo = new PDO('mysql:host=' . $host . ';port=' . $port . ';dbname=account;charset=utf8', $username, $password);
             foreach ($pdo->query('select * from questions') as $row) {
                 echo '<th>
                 <h1>', $row['question'], '</h1>
@@ -39,7 +47,7 @@ if (!isset($_SESSION['user'])) {
     </thead>
     <tbody>
         <?php
-        $pdo = new PDO('mysql:host='.$host.';port=' .$port. ';dbname=account;charset=utf8', $username, $password);
+        $pdo = new PDO('mysql:host=' . $host . ';port=' . $port . ';dbname=account;charset=utf8', $username, $password);
         foreach ($pdo->query('select * from answers ORDER BY `datetime`') as $row) {
             echo '<tr>
             <td>', $row['realname'], '</td>

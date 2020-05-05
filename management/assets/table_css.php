@@ -61,7 +61,7 @@
     .container {
         text-align: left;
         overflow: hidden;
-        width: auto;
+        width: 80%;
         margin: 0 auto;
         display: table;
         padding: 0 0 8em 0;

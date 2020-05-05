@@ -22,7 +22,7 @@ if (!isset($_SESSION['user'])) {
   }
 
   .box {
-    width: 100%;
+    width: 80%;
     padding: 20px;
     background-color: #343a40;
     border: 0;
