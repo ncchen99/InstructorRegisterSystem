@@ -30,6 +30,9 @@ if (!isset($_SESSION['user'])) {
     margin-top: 25px;
     box-sizing: border-box;
   }
+  td{
+    padding-right: 2%;
+  }
 </style>
 
 
