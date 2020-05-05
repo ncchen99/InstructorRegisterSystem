@@ -22,7 +22,7 @@ if (!isset($_SESSION['user'])) {
   }
 
   .box {
-    width: 1270px;
+    width: 100%;
     padding: 20px;
     background-color: #343a40;
     border: 0;
@@ -30,8 +30,83 @@ if (!isset($_SESSION['user'])) {
     margin-top: 25px;
     box-sizing: border-box;
   }
-  td{
+
+  td {
     padding-right: 2%;
+  }
+
+  @media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+
+    td {
+      /* Behave  like a "row" */
+      position: relative;
+      padding-left: 50% !important;
+    }
+
+
+    td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%!important;
+      padding-right: 10px!important;
+      solid black-space: nowrap;
+    }
+
+    td:nth-of-type(1):before {
+      border-right: 2px solid black;
+      content: "#";
+      font-weight: bold;
+    }
+
+    td:nth-of-type(2):before {
+      border-right: 2px solid black;
+      content: "username";
+      font-weight: bold;
+    }
+
+    td:nth-of-type(3):before {
+      border-right: 2px solid black;
+      content: "password";
+      font-weight: bold;
+    }
+
+    td:nth-of-type(4):before {
+      border-right: 2px solid black;
+      content: "realname";
+      font-weight: bold;
+    }
+
+    td:nth-of-type(5):before {
+      border-right: 2px solid black;
+      content: "authority";
+      font-weight: bold;
+    }
+    td:nth-of-type(6):before {
+      border-right: 2px solid black;
+      content: "delete";
+      font-weight: bold;
+    }
   }
 </style>
 
@@ -42,13 +117,12 @@ if (!isset($_SESSION['user'])) {
   <div class="container box">
     <h1 align="center">使用者設定</h1>
     <br />
-    <div class="">
-      <br />
-      <div align="right">
-        <button type="button" name="add" id="add" class="btn btn-info">Add</button>
-      </div>
-      <br />
-      <div id="alert_message"></div>
+    <div align="right">
+      <button type="button" name="add" id="add" class="btn btn-info">Add</button>
+    </div>
+    <br />
+    <div id="alert_message"></div>
+    <div class="table-responsive">
       <table id="user_data" style="width: 100%;">
         <thead>
           <tr>
@@ -121,7 +195,7 @@ require 'footer.php';
       html += '<td contenteditable id="data2"></td>';
       html += '<td contenteditable id="data3"></td>';
       html += '<td contenteditable id="data4"></td>';
-      html += '<td contenteditable ><select class="form-control form-control-sm bg-dark text-white" id="data5"><option>admin</option><option>teacher</option><option>student</option></select></td>';
+      html += '<td contenteditable ><select class="form-control bg-dark text solid -white" id="data5"><option>admin</option><option>teacher</option><option>student</option></select></td>';
       html += '<td><button type="button" name="insert" id="insert" class="btn btn-success btn-xs">Insert</button></td>';
       html += '</tr>';
       $('#user_data tbody').prepend(html);
@@ -199,4 +273,3 @@ require 'footer.php';
     });
   });
 </script>
-

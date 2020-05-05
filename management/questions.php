@@ -22,13 +22,17 @@ if (!isset($_SESSION['user'])) {
     }
 
     .box {
-        width: 1270px;
+        /*width: 1270px;*/
         padding: 20px;
         background-color: #343a40;
         border: 0;
         border-radius: 5px;
         margin-top: 25px;
         box-sizing: border-box;
+    }
+
+    td {
+        padding-right: 2%;
     }
 </style>
 
@@ -39,7 +43,7 @@ if (!isset($_SESSION['user'])) {
     <div class="container box">
         <h1 align="center">問卷新增/修改</h1>
         <br />
-        <div class="">
+        <div class="table-responsive">
             <br />
             <div align="right">
                 <button type="button" name="add" id="add" class="btn btn-info">Add</button>
@@ -114,7 +118,7 @@ require 'footer.php';
             var html = '<tr>';
             html += '<td contenteditable id="data1"></td>';
             html += '<td contenteditable id="data2"></td>';
-            html += '<td contenteditable id="data3"></td>';
+            html += '<td contenteditable ><select class="form-control bg-dark text-white" id="data3"><option>dropDownMenu</option><option>shortAnswerQuestions</option><option>yesNoQuestions</option></select></td>';
             html += '<td contenteditable id="data4"></td>';
             html += '<td><button type="button" name="insert" id="insert" class="btn btn-success btn-xs">Insert</button></td>';
             html += '</tr>';
@@ -125,7 +129,7 @@ require 'footer.php';
         $(document).on('click', '#insert', function() {
             var id = $('#data1').text();
             var question = $('#data2').text();
-            var genre = $('#data3').text();
+            var genre = $('#data3').val();
             var options = $('#data4').text();
             if ((question != '' &&
                     (genre == 'shortAnswerQuestions' || genre == 'yesNoQuestions')) || (question != '' &&

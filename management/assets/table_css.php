@@ -61,7 +61,7 @@
     .container {
         text-align: left;
         overflow: hidden;
-        width: 80%;
+        width: auto;
         margin: 0 auto;
         display: table;
         padding: 0 0 8em 0;
@@ -117,11 +117,4 @@
         margin: 30px;
     }
 
-    @media (max-width: 800px) {
-
-        .container td:nth-child(4),
-        .container th:nth-child(4) {
-            display: none;
-        }
-    }
 </style>
