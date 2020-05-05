@@ -13,6 +13,8 @@ if(isset($_POST["username"], $_POST["password"],$_POST["realname"],$_POST["autho
  if(mysqli_query($connect, $query))
  {
   echo 'Data Inserted';
+ }else{
+    echo 'Something Went Wrong!';
  }
 }
 ?>

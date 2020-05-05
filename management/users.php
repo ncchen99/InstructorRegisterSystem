@@ -118,7 +118,7 @@ require 'footer.php';
       html += '<td contenteditable id="data2"></td>';
       html += '<td contenteditable id="data3"></td>';
       html += '<td contenteditable id="data4"></td>';
-      html += '<td contenteditable id="data5"></td>';
+      html += '<td contenteditable ><select class="form-control form-control-sm bg-dark text-white" id="data5"><option>admin</option><option>teacher</option><option>student</option></select></td>';
       html += '<td><button type="button" name="insert" id="insert" class="btn btn-success btn-xs">Insert</button></td>';
       html += '</tr>';
       $('#user_data tbody').prepend(html);
@@ -146,7 +146,7 @@ require 'footer.php';
       var username = $('#data2').text();
       var password = $('#data3').text();
       var realname = $('#data4').text();
-      var authority = $('#data5').text();
+      var authority = $('#data5').val();
       if (username != '' &&
         password != '' &&
         realname != '' &&
