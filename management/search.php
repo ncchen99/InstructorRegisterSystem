@@ -17,7 +17,7 @@ require 'assets/table_css.php';
     }
 </style>
 
-<div class="container py-5">
+<div class="py-5">
     <div class="card rounded border-0">
         <div class="card-body p-5 bg-white rounded">
             <table id="example" style="width:100%" class="container">
