@@ -1,8 +1,8 @@
 <style>
     @charset "UTF-8";
     @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Indie+Flower&display=swap');
 
     
     body {
@@ -10,9 +10,8 @@
         background-color: #1F2739;
         /*overflow: hidden;*/
         position: relative;
-        
         font-family: 'Noto Sans TC', sans-serif;
-        //font-family: 'Indie Flower', cursive;
+        font-family: 'Dosis', sans-serif;
         line-height: 1.5;
     }
 
