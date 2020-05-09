@@ -99,4 +99,17 @@
     }
 
   }
+  @media screen and (max-width: 420px) {
+    li.paginate_button.previous {
+        display: inline;
+    }
+ 
+    li.paginate_button.next {
+        display: inline;
+    }
+ 
+    li.paginate_button {
+        display: none;
+    }
+}
 </style>

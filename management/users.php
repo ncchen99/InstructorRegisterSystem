@@ -17,7 +17,7 @@ if (!isset($_SESSION['user'])) {
 
 <div class="box">
   <h1 align="center">使用者設定</h1>
-  <br />
+  </br>
   <div align="right">
     <button type="button" name="add" id="add" class="btn btn-info">Add</button>
   </div>
