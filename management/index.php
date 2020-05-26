@@ -25,7 +25,6 @@ if (!isset($_SESSION['user'])) {
     </h1>
 </div>
 
-
 <table class="container">
     <thead>
         <tr>
