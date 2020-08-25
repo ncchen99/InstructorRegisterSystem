@@ -125,9 +125,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `passw`, `realname`, `authority`) VALUES
-(1, 'whcsc', 'whcsc', 'é›»ç¥žé›»çˆ½çˆ½', 'student'),
-(2, 'teacher', 'teacher', 'æˆ‘å¤§æ€ç¾½ä¾ç©¶é›»', 'teacher'),
-(4, 'ncc', 'ncc', 'ncc', 'teacher'),
+(1, 'whcsc', 'whcsc', 'whcsc27', 'student'),
+(2, 'teacher', 'teacher', 'aka', 'teacher'),
+(4, 'admin', 'admin', 'admin', 'admin'),
 (7, 'brainFuck', 'sudoIt', 'Brain', 'student');
 
 --
