@@ -2,13 +2,13 @@
     body {
         margin: 0;
         padding: 0;
-        background-color: #343a40;
+        background-color: #303030;
     }
 
     .box {
         width: 80%;
         padding: 20px;
-        background-color: #343a40;
+        background-color: #303030;
         border: 0;
         border-radius: 5px;
         margin-top: 25px;
@@ -92,18 +92,18 @@
         }
 
     }
-    
-@media screen and (max-width: 420px) {
-    li.paginate_button.previous {
-        display: inline;
+
+    @media screen and (max-width: 420px) {
+        li.paginate_button.previous {
+            display: inline;
+        }
+
+        li.paginate_button.next {
+            display: inline;
+        }
+
+        li.paginate_button {
+            display: none;
+        }
     }
- 
-    li.paginate_button.next {
-        display: inline;
-    }
- 
-    li.paginate_button {
-        display: none;
-    }
-}
 </style>

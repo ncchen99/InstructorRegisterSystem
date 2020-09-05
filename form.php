@@ -80,7 +80,7 @@ if (!isset($_SESSION['user'])) {
   echo '<div class="row"><div class="col">';
   echo '<input class="form-control" id="disabledInput" type="text" placeholder="', $_SESSION['user']['realname'], '" disabled></div>';
   echo '<div class="float-right">
-      <a href="../logout.php"><button class="btn btn-primary" type="submit">登出</button></a>
+      <a href="logout.php"><button class="btn btn-primary" type="submit">登出</button></a>
     </div>
   </div>';
   ?>

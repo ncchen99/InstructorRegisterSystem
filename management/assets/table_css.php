@@ -4,7 +4,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Indie+Flower&display=swap');
 
-    
+
     body {
         color: #A7A1AE;
         background-color: #1F2739;
@@ -47,6 +47,10 @@
 
     .yellow {
         color: #FFF842;
+    }
+
+    .box {
+        background-color: #303030;
     }
 
     .container th h1 {

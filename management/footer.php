@@ -11,17 +11,17 @@
       <!-- Bootstrap core JavaScript
     ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-      <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
-    
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
+      <script src="assets/js/bootstrap-select.min.js"></script>
+      <script src="assets/js/jquery-3.3.1.js"></script>
+      <script src="assets/js/jquery.dataTables.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/dataTables.bootstrap4.js"></script>
+      <!-- (Optional) Latest compiled and minified JavaScript translation files 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+      -->
+      <script src="assets/js/popper.min.core.js"></script>
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
       <script src="https://cdn.datatables.net/1.10.20/js/dataTables.semanticui.min.js"></script>-->
       <script>
@@ -48,12 +48,12 @@
       </script>
       <script>
         $(document).ready(function() {
-            $('#example').DataTable( {
-                "processing": true,
-                "serverSide": true,
-                "ajax": "search/search_sp.php"
-            } );
-        } );
+          $('#example').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": "search/search_sp.php"
+          });
+        });
       </script>
       </body>
 
