@@ -48,7 +48,7 @@ vim config.php
     $username = '帳號';
     $password = '密碼';
     $host = '127.0.0.1　之類的';
-    $port = '3306　通常是安餒';　
+    $port = '3306　通常是安餒';
     $hostport ='127.0.0.1:3306';
  ?>
 ```
